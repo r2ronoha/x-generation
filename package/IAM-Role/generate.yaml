@@ -1,14 +1,14 @@
-group: iam.aws.example.cloud
+group: iam.aws.jamf.io
 name: Role
-version: v1alpha1
+version: v1beta1
 provider:
+  baseURL: https://raw.githubusercontent.com/upbound/%s/%s/package/crds/%s
   name: provider-aws
-  version: v0.32.0
+  version: v0.40.0
   crd:
-    file: iam.aws.crossplane.io_roles.yaml
+    file: iam.aws.upbound.io_roles.yaml
     version: v1beta1
 ignore: false
 compositions:
   - name: role
-    provider: example
     default: true
