@@ -1,28 +1,28 @@
-compositionIdentifier: example.cloud
+compositionIdentifier: crossplane.jamf.com
 provider:
   baseURL: https://raw.githubusercontent.com/crossplane-contrib/%s/%s/package/crds/%s
   name: provider-aws
-  version: v0.32.0
+  version: v0.40.0
 labels:
   fromCRD:
-    - controlling.example.cloud/cost-reference
-    - controlling.example.cloud/owner
-    - controlling.example.cloud/product
-    - tags.example.cloud/account
-    - tags.example.cloud/environment
-    - tags.example.cloud/protection-requirement
-    - tags.example.cloud/repourl
-    - tags.example.cloud/zone
+    - controlling.crossplane.jamf.com/cost-reference
+    - controlling.crossplane.jamf.com/owner
+    - controlling.crossplane.jamf.com/product
+    - tags.crossplane.jamf.com/account
+    - tags.crossplane.jamf.com/cluster
+    - tags.crossplane.jamf.com/environment
+    - tags.crossplane.jamf.com/namespace
+    - tags.crossplane.jamf.com/team
   common:
-    commonLabelA: commonLabelAValue
-    commonLabelB: commonLabelBValue
+    tags.crossplane.jamf.com/project: kubernetes
+    tags.crossplane.jamf.com/owner: chaosmonkeys
 tags:
   fromLabels:
-    - tags.example.cloud/account
-    - tags.example.cloud/environment
-    - tags.example.cloud/protection-requirement
-    - tags.example.cloud/repourl
-    - tags.example.cloud/zone
+    - tags.crossplane.jamf.com/account
+    - tags.crossplane.jamf.com/cluster
+    - tags.crossplane.jamf.com/environment
+    - tags.crossplane.jamf.com/namespace
+    - tags.crossplane.jamf.com/team
   common:
-    commonTagA: comonTagAValue
-    commonTagB: comonTagBValue
+    project: kubernetes
+    owner: chaosmonkeys
